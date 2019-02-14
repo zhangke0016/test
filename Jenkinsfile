@@ -1,12 +1,12 @@
 pipeline {
-    agent any
-    stages {
-        stage('Example Build') {
-            steps {
-              ansiblePlaybook('playbook.yml') {
-                inventoryPath('host.ini')
-              }
-            }
+  agent any
+  stages {
+    stage('Example Build') {
+      steps {
+        ansiblePlaybook('playbook.yml') {
+          inventoryPath('host.ini')
+        }
+      }
     }
   }
 }
