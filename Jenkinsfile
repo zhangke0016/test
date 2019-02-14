@@ -3,8 +3,11 @@ pipeline {
   stages {
     stage('Example Build') {
       steps {
-        ansiblePlaybook('playbook.yml') {
-          inventoryPath('host.ini')
+        ansiColor('xterm') {
+           ansiblePlaybook(
+            playbook: 'playbook.yml',
+            inventory: 'host.ini',
+            colorized: true)
         }
       }
     }
