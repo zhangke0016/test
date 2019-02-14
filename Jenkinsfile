@@ -4,7 +4,7 @@ pipeline {
         stage('Example Build') {
             steps {
               ansiblePlaybook('playbook.yml') {
-                inventoryPath('hosts.ini')
+                inventoryPath('host.ini')
               }
             }
     }
